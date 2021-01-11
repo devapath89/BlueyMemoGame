@@ -1,0 +1,3 @@
+tried adding background picture
+    grid disapaird but its there replaced from background color grey
+    
