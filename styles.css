@@ -14,7 +14,7 @@
 display: inline-block;
 width: 100px;
 height: 100px;
-background-image: url("Bluey_logo.jpg");
+background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/pic/Bluey_logo.jpg?raw=true");
 cursor: pointer;
 
 }
@@ -23,6 +23,6 @@ cursor: pointer;
   
 }
 
-background-color: gray;
+
 
 
