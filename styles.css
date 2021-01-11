@@ -14,7 +14,7 @@
 display: inline-block;
 width: 100px;
 height: 100px;
-background-image: url(/pic/Bluey_logo.jpg);
+background-image: url("Bluey_logo.jpg");
 cursor: pointer;
 
 }
