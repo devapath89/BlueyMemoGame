@@ -1,3 +1,9 @@
+
+gamenoard background pic is now working as intended
+
+
 tried adding background picture
+   
+   
     grid disapaird but its there replaced from background color grey
-    
+    scaled down pics to fit the 100x100pxl
