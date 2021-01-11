@@ -1,5 +1,8 @@
 
-gamenoard background pic is now working as intended
+
+
+failed project scrapping start a new project failed in seperat folder for testing  
+gamebord  background pic is now working as intended
 
 
 tried adding background picture
