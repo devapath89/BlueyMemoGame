@@ -12,8 +12,8 @@ function onCardClicked(e) {
         target.className = target.className.replace('color-hidden','').trim();
         clickedCard =target;
 
-    }else if (clickedCard) {
-
+    // }else if (clickedCard) {
+    //     if 
 
     }
     //if we have allready clicked a card, check if the new card matches the old card
