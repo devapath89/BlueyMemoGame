@@ -1,4 +1,11 @@
 
+stated new project on scratch
+added all pictuers to style.css
+
+
+
+
+
 
 
 failed project scrapping start a new project failed in seperat folder for testing  

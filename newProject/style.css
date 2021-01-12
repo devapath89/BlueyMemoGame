@@ -14,18 +14,38 @@
 display: inline-block;
 width: 100px;
 height: 100px;
-background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/pic/Bluey_logo.jpg?raw=true");
+background: url("pic\Bluey_Logo.jpg");
 cursor: pointer;
 
 }
 .card:hover {
-    border: 1px solid black
+    border: 2px solid black;
   
 }
-.bandit {
+.Bandit {
     background-image:url("pic\Bandit.jpg");
 
 }
-.bingo1 {
-    back
+.Bingo_bluey {
+    background-image: url("pic\Bingo_bluey.jpg");
 }
+.Bingo {
+    background-image: url("pic\Bingo.jpg");
+
+}
+.Bingo1 {
+    background-image: url("pic\Bingo1.jpg");
+}
+.Bluey {
+    background-image: url("pic\Bluey.jpg");
+}
+.Bluey1 {
+    background-image: url("pic\Bluey1.jpg");
+}
+.Chilly {
+    background-image: url("pic\Chilly.jpg");
+}
+.Sokk_muffin {
+    background-image: url("pic\Sokk_muffin.jpg");
+}
+
