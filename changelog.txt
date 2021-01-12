@@ -1,4 +1,8 @@
 
+
+added hidden path . img and background img off cards 
+
+
 stated new project on scratch
 added all pictuers to style.css
 
