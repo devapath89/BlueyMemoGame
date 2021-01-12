@@ -1,4 +1,4 @@
-
+ on click working . hidden pic comes forword
 
 added hidden path . img and background img off cards 
 
