@@ -29,10 +29,6 @@ body{
         transform: scale(.97); /*scaleing the clicked img to 97% off orginal size */
         transition:transform .2s; /*smothing out the transition  */
     }
-    .memo-Card.Flip {
-        trans
-        
-    }
 .front-Face,
 .back-Face {
     width:100%; /*take 100% off the width off the grid */
