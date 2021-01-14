@@ -45,5 +45,5 @@ body{
 }
     
 .front-Face {
-        transform: rotateY(180deg);
+        transform: rotateY(180deg);/*can flip to face card hidden behing Backface card*/
     }
