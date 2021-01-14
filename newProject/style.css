@@ -14,13 +14,16 @@ body{
    margin: auto;/*to center the board */
     width: 400px;/*game board width */
     height: 400px;/*gameboard size hight */
-    
+    perspective: 1000px; /*adding a prespective off 1000px to the card*/
+
 }
 .memo-Card {
     width:100px; /*memory card width  */
     height: 100px;/*memory card hight */
     position: relative;/*position realative to .memory-Game wich is centered*/
     transform: scale(1);/*transforming to picturebehind */
+    transform-style: preserve-3d;/*adding a 3d transform to the card*/
+    transition: transform .5s;
 
   
 
@@ -38,7 +41,8 @@ body{
     width:100%; /*take 100% off the width off the grid */
     height:100%;/*takes 100% off the hight off the grid */
     position: absolute;/*an absolute position to card. */
+    backface-visibility: hidden; /*hide the Back-Face when fliped*/
     
-
-
-
+    /* .front-Face{
+        transform: rotateY(180deg);
+    } */
