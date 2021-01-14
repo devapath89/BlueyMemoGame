@@ -42,7 +42,8 @@ body{
     height:100%;/*takes 100% off the hight off the grid */
     position: absolute;/*an absolute position to card. */
     backface-visibility: hidden; /*hide the Back-Face when fliped*/
+}
     
-    /* .front-Face{
+.front-Face {
         transform: rotateY(180deg);
-    } */
+    }
