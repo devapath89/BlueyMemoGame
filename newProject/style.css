@@ -30,7 +30,7 @@ body{
         transition:transform .2s; /*smothing out the transition  */
     }
     .memo-Card.Flip {
-        trans
+        transform: rotateY(180deg); /*flipping card 180 deg around*/
         
     }
 .front-Face,
