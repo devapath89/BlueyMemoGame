@@ -1,0 +1,58 @@
+:.row {
+    text-align: center;
+
+
+}
+
+
+
+
+
+
+.card  { 
+
+display: inline-block;
+width: 100px;
+height: 100px;
+background-image: url("https://raw.githubusercontent.com/devapath89/BlueyMemoGame/main/newProject/pic/Bluey_Logo.jpg");
+background-size: cover;
+cursor: pointer;
+
+}
+.card:hover {
+    border: 1px solid black;
+    box-shadow: none; /* removed so the boxes move while hovering*/
+    box-sizing: border-box; /* removed so the boxes move while hovering*/
+}
+
+
+.Bandit {
+    background-image:url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bandit.jpg?raw=true");
+
+}
+.Bingo_bluey {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bingo_bluey.jpg?raw=true");
+}
+.Bingo {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bingo.jpg?raw=true");
+
+}
+.Bingo1 {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bingo1.jpg?raw=true");
+}
+.Bluey {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bluey.jpg?raw=true");
+}
+.Bluey1 {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bluey1.jpg?raw=true");
+}
+.Chilly {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Chilly.jpg?raw=true");
+}
+.Sokk_muffin {
+    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Sokk_muffin.jpg?raw=true");
+}
+.color-hidden {
+    background-image: url("https://raw.githubusercontent.com/devapath89/BlueyMemoGame/main/newProject/pic/Bluey_Logo.jpg");
+
+}

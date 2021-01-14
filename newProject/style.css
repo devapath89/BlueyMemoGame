@@ -1,57 +1,40 @@
-:.row {
-    text-align: center;
-
-
+*{
+    padding: 0;/*to center the board */
+    margin: 0; /*to center the board */
+    box-sizing: border-box;/*to center the board */
 }
-
-
-
-
-
-
-.card  { 
-
-display: inline-block;
-width: 100px;
-height: 100px;
-background-image: url("https://raw.githubusercontent.com/devapath89/BlueyMemoGame/main/newProject/pic/Bluey_Logo.jpg");
-background-size: cover;
-cursor: pointer;
-
+body{
+    height: 100vh;/*to center the board */
+    display: flex;/*to center the board */
+    background-color: lightgray;/*to center the board */
 }
-.card:hover {
-    border: 2px solid black;
+.memory-Game {
+   display: flex; /*to center the board */
+   flex-wrap: wrap;/*to center the board */
+   margin: auto;/*to center the board */
+    width: 400px;/*game board width */
+    height: 400px;/*gameboard size hight */
+    
+}
+.memo-Card {
+    width:100px; /*memory card width  */
+    height: 100px;/*memory card hight */
+    position: relative;/*position realative to .memory-Game wich is centered*/
+    transform: scale(1);/*transforming to picturebehind */
+
   
-}
+
+    }
+    .memo-Card:active {
+        transform: scale(.97); /*scaleing the clicked img to 97% off orginal size */
+        transition:transform .2s; /*smothing out the transition  */
+    }
+.front-Face,
+.back-Face {
+    width:100%; /*take 100% off the width off the grid */
+    height:100%;/*takes 100% off the hight off the grid */
+    position: absolute;/*an absolute position to card. */
+    
 
 
-.Bandit {
-    background-image:url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bandit.jpg?raw=true");
 
-}
-.Bingo_bluey {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bingo_bluey.jpg?raw=true");
-}
-.Bingo {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bingo.jpg?raw=true");
-
-}
-.Bingo1 {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bingo1.jpg?raw=true");
-}
-.Bluey {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bluey.jpg?raw=true");
-}
-.Bluey1 {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Bluey1.jpg?raw=true");
-}
-.Chilly {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Chilly.jpg?raw=true");
-}
-.Sokk_muffin {
-    background-image: url("https://github.com/devapath89/BlueyMemoGame/blob/main/newProject/pic/Sokk_muffin.jpg?raw=true");
-}
-.color-hidden {
-    background-image: url("https://raw.githubusercontent.com/devapath89/BlueyMemoGame/main/newProject/pic/Bluey_Logo.jpg");
-
-}
