@@ -1,6 +1,7 @@
 
 let clickedCard =null;
 
+
 function onCardClicked(e) {
     const target = e.currentTarget;
    console.log('clicked',e.currentTarget) 
@@ -9,12 +10,11 @@ function onCardClicked(e) {
     
     // if we havent clicked a card, keep track of the card, display its charater
     if (!clickedCard){
-        target.className = target.className.replace('color-hidden','').trim();
+        target.className = target.classId.replace('color-hidden','').trim();
         clickedCard =target;
 
-    // }else if (clickedCard) {
-    //     if 
-
+    //  }else if (clickedCard) {
+    //      if 
     }
     //if we have allready clicked a card, check if the new card matches the old card
 
