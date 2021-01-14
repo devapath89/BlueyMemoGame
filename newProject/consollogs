@@ -1,0 +1,11 @@
+//     console.log('I was clicked!'); //     console.log(this);
+
+
+//   console.log ({firstCard, secondCard})
+
+
+ //console.log(firstCard.dataset.dataFrag);
+    //console.log (secondCard.dataset.dataFrag);
+
+
+    console.log('function was executed')

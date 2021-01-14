@@ -1,0 +1,49 @@
+*{
+    padding: 0;/*to center the board */
+    margin: 0; /*to center the board */
+    box-sizing: border-box;/*to center the board */
+}
+body{
+    height: 100vh;/*to center the board */
+    display: flex;/*to center the board */
+    background-color: lightgray;/*to center the board */
+}
+.memory-Game {
+   display: flex; /*to center the board */
+   flex-wrap: wrap;/*to center the board */
+   margin: auto;/*to center the board */
+    width: 400px;/*game board width */
+    height: 400px;/*gameboard size hight */
+    perspective: 1000px; /*adding a prespective off 1000px to the card*/
+
+}
+.memo-Card {
+    width:100px; /*memory card width  */
+    height: 100px;/*memory card hight */
+    position: relative;/*position realative to .memory-Game wich is centered*/
+    transform: scale(1);/*transforming to picturebehind */
+    transform-style: preserve-3d;/*adding a 3d transform to the card*/
+    transition: transform .5s;
+
+  
+
+    }
+    .memo-Card:active {
+        transform: scale(.97); /*scaleing the clicked img to 97% off orginal size */
+        transition:transform .2s; /*smothing out the transition  */
+    }
+    .memo-Card.Flip {
+        transform: rotateY(180deg); /*flipping card 180 deg around*/
+        
+    }
+.front-Face,
+.back-Face {
+    width:100%; /*take 100% off the width off the grid */
+    height:100%;/*takes 100% off the hight off the grid */
+    position: absolute;/*an absolute position to card. */
+    backface-visibility: hidden; /*hide the Back-Face when fliped*/
+}
+    
+.front-Face {
+        transform: rotateY(180deg);/*can flip to face card hidden behing Backface card*/
+    }
