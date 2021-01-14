@@ -1,39 +1,54 @@
+const cards = document.querySelectorAll('.memory-card');
+
+  let hasFlippedCard = false;
+  let lockBoard = false;
+  let firstCard, secondCard;
+
+  function flipCard() {
+    this.classList.add('flip');
+
+    if (!hasFlippedCard) {
+      hasFlippedCard = true;
+      if (lockBoard) return;
+      if (this === firstCard) return;
+    }
+
+   secondCard = this;
+   
+
+   checkForMatch();
+ }
+ let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+ isMatch ? disableCards() : unflipCards();
 
 
-const cards = document.querySelectorAll('.memo-Card');//storing all memo-Card in a classlist//
-
-let hasFlippedCard = false;
-let firstCard, secondCard;
-
-
-function flipCard() { 
-  this.classList.add('flip')  //adding and removing Flip as class through
-
-     
-    flipped = document.getElementsByClassName('flipped');
-            if(flipped[0].dataset.framework == flipped[1].dataset.framework){
-                console.log("java");
-            }
-      
-    //do cards match ?
-   if (firstCard.dataset.framework==
-    secondCard.dataset.framework && firstCard.dataset.framework != "") { 
-        
-        //its a match 
-        firstCard.removeEventListener('click', flipCard);
+ function disableCards() {
+   firstCard.removeEventListener('click', flipCard);
    secondCard.removeEventListener('click', flipCard);
-  } else { 
-    //   console.log("test");
-     //not a match 
-    firstCard.classList.remove('flip');
-    // console.log (firstCard.classList);
-    secondCard.classList.remove('flip');
-  }
-       
+   resetBoard();
+ }
+
+ function unflipCards() {
+  lockBoard = true;
   
+  setTimeout(() => {
+     firstCard.classList.remove('flip');
+     secondCard.classList.remove('flip');
+     resetBoard();
+   }, 1500);
+ }
+ function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
+(function shuffle() {
+  cards.forEach(card => {
+    let ramdomPos = Math.floor(Math.random() * 12);
+    card.style.order = ramdomPos;
+  });
+})();
+
+
 
 
 cards.forEach(card => card.addEventListener('click', flipCard));
-
- 
