@@ -11,12 +11,11 @@ body{
 .memory-Game {
     display: flex; /*to center the board */
     flex-wrap: wrap;/*to center the board */
-    margin: auto;/*to center the board */d
+    margin: auto;/*to center the board */
      width: 400px;/*game board width */
      height: 400px;/*gameboard size hight */
-     perspective: 1000px; /*adding a prespective off 1000px to the card*/
-}
-.memory-card {
+     perspective: 1000px;} /*adding a prespective off 1000px to the card*/
+.card {
     width:100px; /*memory card width  */
     height: 100px;/*memory card hight */
     position: relative;/*position realative to .memory-Game wich is centered*/
@@ -25,13 +24,14 @@ body{
     transition: transform .5s;
 }
 
-.memory-card:active {
+.card:active {
     transform: scale(.97); /*scaleing the clicked img to 97% off orginal size */
     transition:transform .2s; /*smothing out the transition  */
 }
-.memory-card.Flip {
+.card.Flip {
     transform: rotateY(180deg); /*flipping card 180 deg around*/
     
+    position: relative;
 }
 .front-Face,
 .back-Face {
@@ -44,3 +44,11 @@ body{
     transform: rotateY(180deg);
   }
     
+
+
+
+
+
+
+
+  

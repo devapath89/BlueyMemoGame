@@ -7,18 +7,21 @@ body{
     height: 100vh;/*to center the board */
     display: flex;/*to center the board */
     background-color: lightgray;/*to center the board */
+    border: 2px solid magenta;
 }
 .memory-Game {
     display: flex; /*to center the board */
     flex-wrap: wrap;/*to center the board */
-    margin: auto;/*to center the board */d
-     width: 400px;/*game board width */
-     height: 400px;/*gameboard size hight */
+    margin: auto;/*to center the board */
+     width: 640px;/*game board width */
+     height: 640px;/*gameboard size hight */
+     border: 2px solid seagreen;
      perspective: 1000px; /*adding a prespective off 1000px to the card*/
 }
-.memory-card {
+.card {
     width:100px; /*memory card width  */
     height: 100px;/*memory card hight */
+    border: 2px solid black; 
     position: relative;/*position realative to .memory-Game wich is centered*/
     transform: scale(1);/*transforming to picturebehind */
     transform-style: preserve-3d;/*adding a 3d transform to the card*/
@@ -33,12 +36,13 @@ body{
     transform: rotateY(180deg); /*flipping card 180 deg around*/
     
 }
-.front-Face,
-.back-Face {
+.card.front,
+.card-back {
     width:100%; /*take 100% off the width off the grid */
     height:100%;/*takes 100% off the hight off the grid */
     position: absolute;/*an absolute position to card. */
     backface-visibility: hidden; /*hide the Back-Face when fliped*/
+    border: 2px solid purple;
 }
 .front-face {
     transform: rotateY(180deg);
