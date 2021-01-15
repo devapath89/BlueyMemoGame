@@ -1,67 +1,42 @@
-let cards = document.getElementsByClassName("memory-card");
-    if (cards !== 0) {
-      let card_array = [];
-      for (let i = 0; i < cards.length; i++) {
-        card_array.push(i);
-      }
-      for (let i = 0; i < cards.length; i++) {
-        let j = Math.floor(Math.random() * card_array.length);
-        let card = cards.item(card_array[j]);
-        card.parentNode.appendChild(card);
-        card_array.splice(j, 1);
-      }
-    }
+-const cards = document.querySelectorAll('.memory-card');
 
-    let hasFlippedCard = false;
-    let lockBoard = false;
-    let firstCard, secondCard;
+let hasFlippedCard = false;
+let firstCard, secondCard;
 
-    function flipCard() {
-      if (lockBoard) return;
-      if (this == firstCard) return;
-      this.classList.add('flip');
-      if (!hasFlippedCard) {
-        hasFlippedCard = true;
-        firstCard = this;
-        return;
-      }
-      secondCard = this;
-      checkForMatch();
-    }
+function flipCard() {
+  this.classList.add('flip');
 
-    function checkForMatch() {
-      let isMatch = firstCard.pog == secondCard.pog;
-      isMatch ? disableCards() : unflipCards();
-    }
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+   return;
+ }
 
-    function disableCards() {
-      firstCard.removeEventListener('click', flipCard);
-      secondCard.removeEventListener('click', flipCard);
-      resetBoard();
-    }
+ secondCard = this;
+ hasFlippedCard = false;
 
-    function unflipCards() {
-      lockBoard = true;
-      setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-        resetBoard();
-      }, 1500);
-    }
+ checkForMatch();
+}
 
-    function resetBoard() {
-      hasFlippedCard = false;
-      loackBoard = false;
-      firstCard = null;
-      secondCard = null;
-    }
+function checkForMatch() {
+ if (firstCard.dataset.framework === secondCard.dataset.framework) {
+   disableCards();
+   return;
+ }
 
-    window.addEventListener("load", function() {
-      document.querySelector(".memory-card").addEventListener("click", function(e) {
-        const tgt = e.target;
-        const card = tgt.closest("div");
-        if (card.classList.contains("front-Face") || card.classList.contains("back-Face")) {
-          card.closest(".card").classList.toggle("flip");
-        }
-      });
-    });
+ unflipCards();
+}
+
+function disableCards() {
+ firstCard.removeEventListener('click', flipCard);
+ secondCard.removeEventListener('click', flipCard);
+}
+
+function unflipCards() {
+ setTimeout(() => {
+   firstCard.classList.remove('flip');
+   secondCard.classList.remove('flip');
+ }, 1500);
+}
+
+cards.forEach(card => card.addEventListener('click', flipCard));
