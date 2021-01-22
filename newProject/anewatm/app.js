@@ -1,4 +1,4 @@
--const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
 let firstCard, secondCard;
